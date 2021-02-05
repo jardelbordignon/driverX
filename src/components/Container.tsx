@@ -9,13 +9,12 @@ interface Props {
   justify?: 'space-between' | 'flex-start' | 'flex-end' | 'center' | 'space-around' | 'space-evenly'
   align?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'baseline'
   padding?: number
-  width?: string 
-  height?: string 
+  width?: number | string 
+  height?: number | string 
   position?: 'relative' | 'absolute'
   top?: number
   zIndex?: number
-  color?: string
-  txtColor?: string
+  color?: 'primary' | 'light' | 'info' | 'info50' | 'dark' | 'black' | 'muted' | 'muted50'
   children: React.ReactNode
 }
 
@@ -32,7 +31,7 @@ export default function Container(props: Props) {
       padding: padding || 0,
       width: '100%',
       maxWidth: width || '100%',
-      maxHeight: height ? height + 'px' : 'auto',
+      height: height || 'auto',
       position: position || 'relative',
       top: top || 0,
       zIndex: zIndex || 1,

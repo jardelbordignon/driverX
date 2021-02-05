@@ -1,0 +1,12 @@
+{
+  "colors": {
+    "primary": "#f9813A",
+    "light": "#fff",
+    "info": "#4267b2",
+    "info50": "#A8BACB",
+    "dark": "#32353D",
+    "black": "#000",
+    "muted": "#C4C4C4",
+    "muted50": "#F4F4F4"
+  }
+}

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "a": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "react": "16.13.1",
-    "react-native": "0.63.4",
-    "styled-components": "^5.2.1"
+    "react-native": "0.63.4"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -21,7 +20,6 @@
     "@types/jest": "^25.2.3",
     "@types/react-native": "^0.63.2",
     "@types/react-test-renderer": "^16.9.2",
-    "@types/styled-components": "^5.1.7",
     "babel-jest": "^25.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^6.5.1",

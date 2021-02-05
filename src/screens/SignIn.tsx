@@ -1,10 +1,12 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
+
+import Container from '@src/components/Container'
 
 export default function SignIn() {
   return (
-    <View>
+    <Container color='info50'>
       <Text>Signing</Text>
-    </View>
+    </Container>
   )
 }

@@ -7,30 +7,53 @@ interface Props {
   fontWeight?: 'normal' | 'bold' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900'
   icon?: string
   color?:       'primary' | 'light' | 'info' | 'info50' | 'dark' | 'black' | 'muted' | 'muted50'
-  background?:  'primary' | 'light' | 'info' | 'info50' | 'dark' | 'black' | 'muted' | 'muted50'
+  background?:  'primary' | 'light' | 'info' | 'info50' | 'dark' | 'black' | 'muted' | 'muted50' | 'primary-opacity'
   borderColor?: 'primary' | 'light' | 'info' | 'info50' | 'dark' | 'black' | 'muted' | 'muted50'
+  borderWidth?: number
   width?: number | string 
   height?: number | string
   paddingV?: number
   marginH?: number
+  marginV?: number
   children: React.ReactNode
+  // All other props ...rest
+  [x:string]: any;
 }
 
-export default function CustomButton(
-  {fontWeight, icon, color, background, borderColor, width, height, paddingV, marginH, children, ...rest}: Props) {
+export default function CustomButton({
+  fontWeight,
+  icon,
+  color,
+  background,
+  borderColor,
+  borderWidth,
+  width,
+  height,
+  paddingV,
+  marginH,
+  marginV,
+  children,
+  ...rest
+}: Props) {
 
   const bgColor = background || 'primary'
 
   return (
-    <TouchableOpacity style={{
-      paddingVertical: paddingV || 15,
-      width: width || '85%',
-      backgroundColor: theme.colors[bgColor],
-      borderColor: theme.colors[borderColor || bgColor],
-      flexDirection: 'row',
-      borderWidth: 1,
-      }}
-      {...rest}>
+    <TouchableOpacity style={[
+      {
+        paddingVertical: paddingV || 15,
+        width: width || '100%',
+        height,
+        marginHorizontal: marginH,
+        marginVertical: marginV,
+        backgroundColor: theme.colors[bgColor],
+        borderColor: theme.colors[borderColor || bgColor],
+        flexDirection: 'row',
+        borderWidth: borderWidth || 1,
+      },
+      {...rest}
+    ]}
+      >
 
       {icon &&
         <View style={styles.iconWrapper}>

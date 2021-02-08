@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { Keyboard } from 'react-native'
 
-import { Box, Btn, BtnTxt, Title, SubTitle, Input, Spacer } from '@src/styles'
+import { Box, Btn, BtnTxt, Title, SubTitle, Input, Spacer, AddressList, AddressItem } from '@src/styles'
 
-export default function Car() {
+export default function Ride() {
   const [btnVisible, setBtnVisible] = useState(true)
 
   /**
@@ -28,21 +28,28 @@ export default function Car() {
   return (
     <Box padding={20} justify='flex-start'>
 
-      <Box align='flex-start' height={40} top={10}>
-        <Title>Cadastre seu veículo</Title>
-        <SubTitle>Preencha os campos abaixo</SubTitle>
+      <Box row height={50} justify='space-between'>
+        <SubTitle>Voltar</SubTitle>
+        <Title>Corrida</Title>
+        <Box width='15%' />
       </Box>
 
-      <Box justify='flex-start'>
-        <Spacer height={60} />
-        <Input placeholder='Placa do veículo' />
+
+      <Box>
+        <Input placeholder='Embarque' />
+        <Input placeholder='Destino' />
         <Spacer />
-        <Input placeholder='Marca do veículo' />
-        <Spacer />
-        <Input placeholder='Modelo do veículo' />
-        <Spacer />
-        <Input placeholder='Cor do veículo' />
+        <AddressList 
+          data={Array.from({length: 20}, (v, i) => i+1)}
+          renderItem={({item, index}) => (
+            <AddressItem>
+              <SubTitle bold>Parque Farroupilha</SubTitle>
+              <SubTitle small>Porto Alegre/RS - BR</SubTitle>
+            </AddressItem>
+          )}
+        />
       </Box>
+
 
       { btnVisible && 
         <Box align='flex-end' height={70}>
@@ -51,6 +58,7 @@ export default function Car() {
           </Btn>
         </Box>
       }
+
     </Box>
   )
 }

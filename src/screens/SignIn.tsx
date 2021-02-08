@@ -1,17 +1,32 @@
 import React from 'react'
-import { Image } from 'react-native'
+import {Image} from 'react-native'
 
-import Container from '@src/components/Container'
-import CustomButton from '@src/components/CustomButton'
+import {Box, Btn, BtnTxt} from '@src/styles'
 
-import logo from '@src/assets/driverX.png' 
-import backgroud from '@src/assets/backgroud_car.png' 
+import logo from '@src/assets/driverX.png'
+import backgroud from '@src/assets/backgroud_car.png'
 
 export default function SignIn() {
   return (
-    <Container color='info50' justify="flex-end">
+    <Box backgroud="info50" justify="flex-end">
+      <Box
+        justify="space-around"
+        padding={20}
+        position="absolute"
+        height={330}
+        zIndex={9}
+      >
+        <Image source={logo} style={{marginVertical: 30}} />
 
-      <Container
+        <Btn backgroud="info">
+          <BtnTxt color="light">Fazer login com Facebook</BtnTxt>
+        </Btn>
+        <Btn backgroud="light">
+          <BtnTxt>Fazer login com Facebook</BtnTxt>
+        </Btn>
+      </Box>
+
+      {/* <Container
         justify='space-around'
         position='absolute'
         height={300}
@@ -28,9 +43,9 @@ export default function SignIn() {
           Fazer login com Google
         </CustomButton>
 
-      </Container>
+      </Container> */}
 
       <Image source={backgroud} />
-    </Container>
+    </Box>
   )
 }

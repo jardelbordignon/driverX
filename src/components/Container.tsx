@@ -9,6 +9,8 @@ interface Props {
   justify?: 'space-between' | 'flex-start' | 'flex-end' | 'center' | 'space-around' | 'space-evenly'
   align?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'baseline'
   padding?: number
+  paddingH?: number
+  paddingV?: number
   width?: number | string 
   height?: number | string 
   position?: 'relative' | 'absolute'
@@ -20,15 +22,16 @@ interface Props {
 
 export default function Container(props: Props) {
 
-  const { align, color, flex, height, justify, padding, position, row, top, width, zIndex } = props
+  const { align, color, flex, height, justify, padding, paddingH, paddingV, position, row, top, width, zIndex } = props
 
   return (
     <View style={{
-      flex: flex || 1,
+      flex: flex || 0,
       flexDirection: row ? 'row' : 'column',
       justifyContent: justify || 'center',
       alignItems: align || 'center',
-      padding: padding || 0,
+      paddingVertical: paddingV || padding || 0,
+      paddingHorizontal: paddingH || padding || 0,
       width: '100%',
       maxWidth: width || '100%',
       height: height || 'auto',

@@ -1,16 +1,14 @@
-import 'react-native-gesture-handler';
-import React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import 'react-native-gesture-handler'
+import React from 'react'
+import { Provider as ReduxProvider } from 'react-redux'
 
-import Routes from '@src/screens/routes';
+import store from '@src/store'
+import Routes from '@src/screens/routes'
 
 export default function App() {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={{flex: 1}}>
-        <Routes />
-      </SafeAreaView>
-    </>
+    <ReduxProvider store={store}>
+      <Routes />
+    </ReduxProvider>
   )
 }

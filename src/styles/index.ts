@@ -7,7 +7,7 @@ import theme from './theme.json'
 
 export const Box = styled.View `
   flex: 1;
-  background-color: ${props => props.bg ? theme.colors[props.bg] : 'transparent'};
+  background-color: ${props => props.background ? theme.colors[props.background] : 'transparent'};
   flex-direction: ${props => props.row ? 'row' : 'column'};
   justify-content: ${props => props.justify || 'center'};
   padding: ${props => props.padding || 0}px;
@@ -24,7 +24,7 @@ export const Btn = styled.TouchableOpacity `
   width: 100%;
   padding: ${props => props.padding || 15}px;
   opacity: ${props => props.disabled ? 0.5 : 1};
-  background: ${props => props.bg ? theme.colors[props.bg] : theme.colors.primary};
+  background: ${props => props.background ? theme.colors[props.background] : theme.colors.primary};
 `
 export const BtnTxt = styled.Text `
   text-align: center;

@@ -5,7 +5,7 @@ import { CreditCardInput } from 'react-native-credit-card-input'
 import { Box, Btn, BtnTxt, Title, SubTitle, Spacer } from '@src/styles'
 
 export default function Payment() {
-  const [btnVisible, setBtnVisible] = useState(false)
+  const [btnVisible, setBtnVisible] = useState(true)
 
   /**
    * Escondendo o Button quando abre o keyboard

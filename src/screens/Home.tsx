@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import { Text, TouchableOpacity } from 'react-native'
-import Feather from 'react-native-vector-icons/Feather'
+import MCI from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import {useFocusEffect, useNavigation} from '@react-navigation/native'
 
@@ -56,7 +56,7 @@ export default function Home() {
       />
 
       <Box
-        //bg='info'
+        //background='info'
         position='absolute'
         justify='space-between'
         align='flex-start'
@@ -76,7 +76,7 @@ export default function Home() {
 
         {/* Com corrida axibe os endereços */}
         { status !== 'S' &&
-          <Box height={110} bg='light' justify='flex-end'>
+          <Box height={110} background='light' justify='flex-end'>
             <Spacer />
             <Box row justify='flex-start'>
               <Bullet />
@@ -88,7 +88,7 @@ export default function Home() {
             </Box>
             <Spacer />
             { type === 'S' && 
-              <Btn bg='dark' padding={10}>
+              <Btn background='dark' padding={10}>
                 <BtnTxt color='light'>Toque para editar</BtnTxt>
               </Btn>
             }
@@ -108,7 +108,7 @@ export default function Home() {
         }
 
         <Box
-          bg='light'
+          background='light'
           elevation={50}
           height={150}>
  
@@ -143,7 +143,7 @@ export default function Home() {
 
               <Spacer />
 
-              <Btn bg={ status === 'P' ? 'muted' : 'primary' }>
+              <Btn background={ status === 'P' ? 'muted' : 'primary' }>
                 <BtnTxt>
                   { status === 'P' ? 'Cancelar' : 'Chamar' } DriverX
                 </BtnTxt>
@@ -170,7 +170,7 @@ export default function Home() {
                   <SubTitle color='primary'>Aprox. 5 min</SubTitle>
                 </Box>
               </Box>
-              <Btn bg={'muted'}>
+              <Btn background={'muted'}>
                 <BtnTxt>
                   Cancelar Corrida
                 </BtnTxt>
@@ -203,7 +203,9 @@ export default function Home() {
                 </Box>
               </Box>
               <Btn>
-                <BtnTxt>Aceitar Corrida</BtnTxt>
+                <BtnTxt>
+                  <MCI name='car-hatchback' size={22} /> Aceitar Corrida
+                </BtnTxt>
               </Btn>
             </Box>
           }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Text, TouchableOpacity } from 'react-native'
+import { Image } from 'react-native'
 
 import { Box, Btn, BtnTxt, Title, SubTitle, PickerButton } from '@src/styles'
 

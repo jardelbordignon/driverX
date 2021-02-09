@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Keyboard } from 'react-native'
+import MCI from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { Box, Btn, BtnTxt, Title, SubTitle, Input, Spacer } from '@src/styles'
 
@@ -29,7 +30,7 @@ export default function Car() {
     <Box padding={20} justify='flex-start'>
 
       <Box align='flex-start' height={40} top={10}>
-        <Title>Cadastre seu veículo</Title>
+        <Title><MCI name='car' size={20} /> Cadastre seu veículo</Title>
         <SubTitle>Preencha os campos abaixo</SubTitle>
       </Box>
 
@@ -47,7 +48,7 @@ export default function Car() {
       { btnVisible && 
         <Box align='flex-end' height={70}>
           <Btn>
-            <BtnTxt>Começar a usar</BtnTxt>
+            <BtnTxt><MCI name='car-arrow-right' size={20} /> Começar a usar</BtnTxt>
           </Btn>
         </Box>
       }
